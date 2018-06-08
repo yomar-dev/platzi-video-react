@@ -47,4 +47,7 @@ class Media extends Component{
 
 export default Media;
 ```
-> **Nota:** Hay que tener en cuenta que para poder asignarle el atributo `class` a los elementos `HTML` hay que utilizar `className` debido a que `class` es una palabra reservada de `Javascript` y por ende causaria conflictos. 
+> **Nota:** Hay que tener en cuenta que para poder asignarle el atributo `class` a los elementos `HTML` hay que utilizar `className` debido a que `class` es una palabra reservada de `Javascript` y por ende causaria conflictos.
+
+
+Dependencia que me permite validar el tipo de las propiedades: `npm install prop-types --save` <br>
