@@ -7,3 +7,5 @@
 
 > Desarrollo: `webpack.dev.config.js` <br>
 > Producción: `webpack.config.js` <br>
+
+### Instalar React y react DOM: `npm install react react-dom --save`
