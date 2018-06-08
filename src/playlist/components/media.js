@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './media.css';
 
 class Media extends Component{
@@ -15,6 +16,12 @@ class Media extends Component{
             </div>
         )
     }
+}
+
+Media.propTypes = {
+    title: PropTypes.string,
+    author: PropTypes.string,
+    image: PropTypes.string
 }
 
 export default Media;
