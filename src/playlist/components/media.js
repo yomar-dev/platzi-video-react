@@ -28,7 +28,7 @@ class Media extends Component{
         return(
             <div className="Media" onClick={this.handleClick}>
                 <div className="Media-cover">
-                    <img className="Media-image" src={cover} width={260} height={160} />
+                    <img className="Media-image" src={cover} />
                     <h3>{title}</h3>
                     <p>{author}</p>
                 </div>

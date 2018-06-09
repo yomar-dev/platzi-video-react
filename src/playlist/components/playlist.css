@@ -1,0 +1,7 @@
+.Playlist {
+    background: #444;
+    overflow-x: auto;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr;
+    overflow-y: hidden;
+}

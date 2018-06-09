@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Media from './media';
+import './playlist.css';
 
 class Playlist extends Component{
     render(){
@@ -8,7 +9,7 @@ class Playlist extends Component{
         console.log(data);
 
         return (
-            <div>
+            <div className="Playlist">
                 {
                     playlist.map((item) => {
                         return <Media {...item} key={item.id} />

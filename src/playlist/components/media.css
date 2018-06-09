@@ -3,11 +3,14 @@
     border: 1px solid #bbb;
     box-sizing: border-box;
     color: #222;
+    display: inline-block;
     font-family: sans-serif;
+    margin: .5em;
     padding: 1em;
-    width: 260px;  
+    width: 260px;
 }
 
 img {
+    height: 120px;
     width: 100%;
 }
