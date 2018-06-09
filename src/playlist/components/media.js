@@ -12,7 +12,12 @@ class Media extends Component{
     }
 
     handleClick = (event) => {
-        console.log(this.props.author);
+        /**
+         * Cambiar el estado de una propiedad
+         */
+        this.setState({
+            author: 'Yomar Miranda'
+        })
     }
     
     render(){
