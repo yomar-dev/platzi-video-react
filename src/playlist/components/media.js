@@ -7,9 +7,9 @@ class Media extends Component{
         const { title, author, image } = this.props
 
         return(
-            <div className="contenedor">
-                <div>
-                    <img src={image} width={260} height={160} />
+            <div className="Media">
+                <div className="Media-cover">
+                    <img className="Media-image" src={image} width={260} height={160} />
                     <h3>{title}</h3>
                     <p>{author}</p>
                 </div>
