@@ -2,6 +2,6 @@
     background: #444;
     overflow-x: auto;
     display: grid;
-    grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr;
+    grid-template: 1fr / repeat(7, 1fr);
     overflow-y: hidden;
 }

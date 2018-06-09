@@ -1,6 +1,7 @@
 import React from 'react';
 import Media from './media';
 import './playlist.css';
+import Play from '../../icons/components/play'
 
 function Playlist(props){
     const { data } = props
@@ -9,6 +10,7 @@ function Playlist(props){
 
     return (
         <div className="Playlist">
+            <Play size={50} color="teal" />
             {
                 playlist.map((item) => {
                     return <Media {...item} key={item.id} />
