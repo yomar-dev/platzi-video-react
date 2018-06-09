@@ -50,9 +50,64 @@ export default Media;
 > **Nota:** Hay que tener en cuenta que para poder asignarle el atributo `class` a los elementos `HTML` hay que utilizar `className` debido a que `class` es una palabra reservada de `Javascript` y por ende causaria conflictos.
 
 
+### Ciclo de vida de los componentes: <br><br>
+
+#### Montado: El momento en que el componente entra en escena.
+
+**constructor:** Método llamado antes de que el componente sea montado (componente aun no se ve). <br>
+
+- Podemos iniciar el estado
+- Enlazar eventos (bind).
+- Es el primer metodo que se llama al instanciar un componente. <br><br>
+
+
+**componentWillMount:** Método llamado inmediatamente antes de que el componente se vaya a montar (componente aun no se ve). <br>
+
+- Podemos hacer un setState()
+- No hacer llamados a un API o suscripción a eventos. <br><br>
+
+
+**render:** Método que contiene todos los elementos a renderizar (estructura del componente). <br>
+
+- Contiene JSX en el return.
+- Puedes calcular propiedades nCompleto = name + lastName. <br><br>
+
+**componentDidMount:** Método llamado luego de montarse el componente (el componente ya esta en la pantalla). <br>
+
+- Solo se lanza una vez.
+- Enlazar (bind) de eventos.
+- Es el primer método que se llama al instanciar un componente.
+- Aqui podemos utilizar APIs (Navegador o Datos Externos). <br><br>
+
+
+#### Actualización
+
+**componentWillReceiveProps:** Método llamado al recibir nuevas propiedades que sirve para actualizar el estado con base a las nuevas propiedades. <br>
+
+**shouldComponentUpdate:** Método que condiciona si el componente se debe volver a renderizar, es utilizado para optimizar el rendimiento. <br>
+
+**componentWillUpdate:** Método llamado antes de re-renderizar un componente, es utilizado para optimizar el rendimiento. <br>
+
+**render:** Método que realiza el re-render. <br>
+
+**componentDidUpdate:** Método llamado luego del re-render. <br> <br>
+
+
+#### Desmontado
+
+**componentWillUnmount:** Método llamado antes de que el componente sea retirado de la aplicación. <br>
+
+**componentDidCatch:** Método llamado cuando ocurre un error al renderizar el componente, el manejo de errores solamente ocurre en componentes hijos. <br><br>
+
+
+
+
+
 Dependencia que me permite validar el tipo de las propiedades: `npm install prop-types --save` <br>
 
 
 ### Enlaces de interes:
 
 [https://reactjs.org/docs/handling-events.html](Eventos React) <br>
+[https://reactjs.org/docs/state-and-lifecycle.html](Ciclo de vida de los componentes - Doc oficial ReactJS) <br>
+[https://rangle.github.io/react-training/react-summary/](Ciclo de vida de los componentes) <br>
