@@ -51,3 +51,8 @@ export default Media;
 
 
 Dependencia que me permite validar el tipo de las propiedades: `npm install prop-types --save` <br>
+
+
+### Enlaces de interes:
+
+[https://reactjs.org/docs/handling-events.html](Eventos React) <br>

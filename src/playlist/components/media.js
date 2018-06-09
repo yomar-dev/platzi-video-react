@@ -4,8 +4,8 @@ import './media.css';
 
 class Media extends Component{
 
-    handleClick(event){
-        console.log(event);
+    handleClick = (event) => {
+        console.log(this.props.author);
     }
     
     render(){
