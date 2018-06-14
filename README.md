@@ -8,7 +8,8 @@
 > Desarrollo: `webpack.dev.config.js` <br>
 > Producción: `webpack.config.js` <br>
 
-### Instalar React y react DOM: `npm install react react-dom --save`
+### Instalar React y react DOM: <br>
+`npm install react react-dom --save`
 
 
 ### Dar estilos a los componentes: <br>
@@ -108,6 +109,6 @@ Dependencia que me permite validar el tipo de las propiedades: `npm install prop
 
 ### Enlaces de interes:
 
-[https://reactjs.org/docs/handling-events.html](Eventos React) <br>
-[https://reactjs.org/docs/state-and-lifecycle.html](Ciclo de vida de los componentes - Doc oficial ReactJS) <br>
-[https://rangle.github.io/react-training/react-summary/](Ciclo de vida de los componentes) <br>
+(https://reactjs.org/docs/handling-events.html)[Eventos React] <br>
+(https://reactjs.org/docs/state-and-lifecycle.html)[Ciclo de vida de los componentes - Doc oficial ReactJS] <br>
+(https://rangle.github.io/react-training/react-summary/)[Ciclo de vida de los componentes] <br>
