@@ -110,5 +110,6 @@ Dependencia que me permite validar el tipo de las propiedades: `npm install prop
 ### Enlaces de interes:
 
 (https://reactjs.org/docs/handling-events.html)[Eventos React] <br>
+(https://reactjs.org/docs/handling-events.html)[Manejo de enventos] <br>
 (https://reactjs.org/docs/state-and-lifecycle.html)[Ciclo de vida de los componentes - Doc oficial ReactJS] <br>
 (https://rangle.github.io/react-training/react-summary/)[Ciclo de vida de los componentes] <br>
