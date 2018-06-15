@@ -5,11 +5,21 @@ import Title from '../components/title';
 import PlayPause from '../components/play-pause';
 
 class VideoPlayer extends Component{
+	state = {
+		pause: true
+	}
+
+	togglePlay = (event) => {
+		this.setState({
+			pause: !this.state.pause
+		})
+	}
+
 	render(){
 		return(
 			<VideoPlayerLayout>
 				<Title title="Título de nuestro video" />
-				<PlayPause />
+				<PlayPause handleClick={this.togglePlay} pause={this.state.pause}/>
 				<Video
 					autoplay={true}
 					src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
