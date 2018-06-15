@@ -7,7 +7,8 @@ import Modal from '../../widgets/components/modal';
 
 class Home extends Component{
 	state = {
-		modalVisible: false
+		modalVisible: false,
+		handleError: false,
 	}
 
 	handleOpenModal = (event) => {
@@ -22,7 +23,17 @@ class Home extends Component{
 		})
 	}
 
+	componentDidCatch(error, info){
+		this.setState({
+			handleError: true,
+		})
+	}
+
     render(){
+    	if(this.state.handleError){
+    		return <p>Estamos teniendo problemas :/</p>
+    	}
+
         return(
             <HomeLayout>
             	<Related />
