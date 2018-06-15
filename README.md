@@ -91,7 +91,7 @@ export default Media;
 
 **render:** Método que realiza el re-render. <br>
 
-**componentDidUpdate:** Método llamado luego del re-render. <br> <br>
+**componentDidUpdate:** Método llamado luego del re-render. <br><br>
 
 
 #### Desmontado
@@ -101,10 +101,24 @@ export default Media;
 **componentDidCatch:** Método llamado cuando ocurre un error al renderizar el componente, el manejo de errores solamente ocurre en componentes hijos. <br><br>
 
 
+Dependencia que me permite validar el tipo de las propiedades: `npm install prop-types --save` <br><br>
 
+**Portales:** Es la manera en la que podemos renderizar componentes fuera del contenedor principal de la aplicación (`<divid="App"></div>`). <br><br>
 
+El caso de uso mas común son las ventanas modal, para crear un portal, se debe importar el metodo createPortal de react-dom: <br>
+`import { createPortal} from'react-dom';` <br><br>
 
-Dependencia que me permite validar el tipo de las propiedades: `npm install prop-types --save` <br>
+El metodo **createPortal()** recibe dos parametros, al igual que con render es Lo que se va a renderizar y donde se va a renderizar: <br>
+
+```javascript
+class ModalContainer extends Component{
+  render() {
+    return (
+      createPortal(<Component />, document.getElementById('component-container'))
+    )
+  }
+}
+```
 
 
 ### Enlaces de interes:
