@@ -10,9 +10,17 @@ import './search.css';
 	)
 }*/
 
-const Search = () => (
-	<form className="Search">
-		<input type="text" className="Search-input" placeholder="Busca tu video favorito" />
+const Search = (props) => (
+	<form className="Search" onSubmit={props.handleSubmit}>
+		<input 
+			ref={props.setRef}
+			type="text"
+			name="search"
+			className="Search-input"
+			placeholder="Busca tu video favorito"
+			onChange={props.handleChange}
+			value={props.value}
+		/>
 	</form>
 )
 
