@@ -6,19 +6,10 @@ class Media extends PureComponent{
     state = {
         author: 'Ronaldinho'
     }
-    /*constructor(props){
-        super(props);
-        this.state = {
-            author: props.author
-        }
-    }*/
 
     handleClick = (event) => {
-        /**
-         * Cambiar el estado de una propiedad
-         */
         this.setState({
-            author: 'Yomar Miranda'
+            //author: 'Yomar Miranda'
         })
     }
     
@@ -26,7 +17,7 @@ class Media extends PureComponent{
         const { title, author, cover } = this.props
 
         return(
-            <div className="Media" onClick={this.handleClick}>
+            <div className="Media" onClick={this.props.handleClick}>
                 <div className="Media-cover">
                     <img className="Media-image" src={cover} />
                     <h3>{title}</h3>
