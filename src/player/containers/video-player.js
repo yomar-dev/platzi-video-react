@@ -9,7 +9,8 @@ import Controls from '../components/video-player-controls';
 class VideoPlayer extends Component{
 	state = {
 		pause: true,
-		duration: 0
+		duration: 0,
+		currentTime: 0
 	}
 
 	togglePlay = (event) => {
@@ -31,18 +32,25 @@ class VideoPlayer extends Component{
 		});
 	}
 
+	handleTimeUpdate = event => {
+		this.setState({
+			currentTime: this.video.currentTime
+		})
+	}
+
 	render(){
 		return(
 			<VideoPlayerLayout>
 				<Title title="Título de nuestro video" />
 				<Controls>
 					<PlayPause handleClick={this.togglePlay} pause={this.state.pause}/>
-					<Timer duration={this.state.duration} />
+					<Timer duration={this.state.duration} currentTime={this.state.currentTime} />
 				</Controls>
 				<Video
 					autoplay={this.props.autoplay}
 					pause={this.state.pause}
 					handleLoadedMetadata={this.handleLoadedMetadata}
+					handleTimeUpdate={this.handleTimeUpdate}
 					src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
 				/>
 			</VideoPlayerLayout>
