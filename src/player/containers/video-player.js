@@ -63,9 +63,21 @@ class VideoPlayer extends Component{
 		this.video.volume = event.target.value;
 	}
 
+	handleFullScreenClick = event => {
+		if(!document.webkitIsFullScreen){
+			this.player.webkitRequestFullScreen();
+		}else{
+
+		}
+	}
+
+	setRef = element => {
+		this.player = element;
+	}
+
 	render(){
 		return(
-			<VideoPlayerLayout>
+			<VideoPlayerLayout setRef={this.setRef}>
 				<Title title="Título de nuestro video" />
 				<Controls>
 					<PlayPause handleClick={this.togglePlay} pause={this.state.pause}/>
@@ -76,7 +88,7 @@ class VideoPlayer extends Component{
 						handleProgressChange={this.handleProgressChange}
 					/>
 					<Volume handleVolumeChange={this.handleVolumeChange} />
-					<FullScreen />
+					<FullScreen handleFullScreenClick={this.handleFullScreenClick} />
 				</Controls>
 				<Spinner active={this.state.loading} />
 				<Video
