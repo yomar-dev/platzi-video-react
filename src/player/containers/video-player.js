@@ -39,6 +39,10 @@ class VideoPlayer extends Component{
 		})
 	}
 
+	handleProgressChange = event => {
+		this.video.currentTime = event.target.value
+	}
+
 	render(){
 		return(
 			<VideoPlayerLayout>
@@ -46,7 +50,11 @@ class VideoPlayer extends Component{
 				<Controls>
 					<PlayPause handleClick={this.togglePlay} pause={this.state.pause}/>
 					<Timer duration={this.state.duration} currentTime={this.state.currentTime} />
-					<ProgressBar duration={this.state.duration} value={this.state.currentTime} />
+					<ProgressBar
+						duration={this.state.duration}
+						value={this.state.currentTime}
+						handleProgressChange={this.handleProgressChange}
+					/>
 				</Controls>
 				<Video
 					autoplay={this.props.autoplay}
