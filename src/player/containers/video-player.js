@@ -58,6 +58,10 @@ class VideoPlayer extends Component{
 		})
 	}
 
+	handleVolumeChange = event => {
+		this.video.volume = event.target.value;
+	}
+
 	render(){
 		return(
 			<VideoPlayerLayout>
@@ -70,7 +74,7 @@ class VideoPlayer extends Component{
 						value={this.state.currentTime}
 						handleProgressChange={this.handleProgressChange}
 					/>
-					<Volume />
+					<Volume handleVolumeChange={this.handleVolumeChange} />
 				</Controls>
 				<Spinner active={this.state.loading} />
 				<Video
