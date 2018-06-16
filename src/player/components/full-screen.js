@@ -4,7 +4,7 @@ import './full-screen.css';
 
 const FullScreen = (props) => (
 	<div className="FullScreen">
-		<FullScreen color="white" size={25} />
+		<FullScreenIcon color="white" size={25} />
 	</div>
 )
 
